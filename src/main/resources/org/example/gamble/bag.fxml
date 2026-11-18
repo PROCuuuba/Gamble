@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.SVGPath?>
+
+<Group xmlns:fx="http://javafx.com/fxml">
+    <Ellipse centerX="54" centerY="93" radiusX="43" radiusY="7" styleClass="bag-shadow"/>
+    <SVGPath content="M 37 30 Q 25 16 31 9 Q 43 7 53 13 Q 65 6 77 10 Q 81 17 69 30 C 78 41 96 54 97 73 Q 101 94 74 96 L 32 96 Q 6 93 10 73 C 12 55 29 42 37 30 Z"
+             styleClass="bag-body"/>
+    <SVGPath content="M 31 9 Q 43 7 53 13 Q 65 6 77 10 Q 81 17 69 30 L 37 30 Q 25 16 31 9 Z"
+             styleClass="bag-top"/>
+    <SVGPath content="M 33 29 Q 53 35 73 29 L 72 35 Q 53 42 34 35 Z" styleClass="bag-tie"/>
+    <SVGPath content="M 55 34 Q 70 33 77 43 M 55 35 Q 63 42 64 49" styleClass="bag-cord"/>
+    <SVGPath content="M 54 50 L 72 68 L 54 86 L 36 68 Z M 46 68 L 54 76 L 62 68 L 54 60 Z"
+             fillRule="EVEN_ODD" styleClass="bag-emblem"/>
+</Group>

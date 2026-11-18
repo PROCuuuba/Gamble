@@ -1,0 +1,222 @@
+.machine, .game-dialog {
+    -fx-background-color: linear-gradient(to bottom right, #34131f, #1e101a 66%, #170e17);
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+}
+
+.eyebrow, .caption {
+    -fx-text-fill: #e2ad6d;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.caption, .muted {
+    -fx-text-fill: #d4b4ae;
+}
+
+.title {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 46px;
+    -fx-text-fill: #fff2da;
+}
+
+.balance-panel {
+    -fx-padding: 12 17;
+    -fx-background-color: #411f2c;
+    -fx-background-radius: 12;
+    -fx-border-color: #744456;
+    -fx-border-radius: 12;
+}
+
+.balance, .round-count {
+    -fx-text-fill: #ffe5b5;
+    -fx-font-weight: bold;
+    -fx-font-size: 26px;
+}
+
+.round-count {
+    -fx-font-size: 20px;
+}
+
+.cabinet {
+    -fx-background-color: linear-gradient(to bottom, #49212c, #351824);
+    -fx-background-radius: 20;
+    -fx-border-color: #925b42;
+    -fx-border-radius: 20;
+    -fx-padding: 16;
+}
+
+.stake {
+    -fx-text-fill: #f1cb96;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-background-color: #5a302e;
+    -fx-background-radius: 14;
+    -fx-padding: 5 10;
+}
+
+.reel {
+    -fx-background-color: radial-gradient(center 50% 42%, radius 72%, #54232f, #27131f);
+    -fx-background-radius: 12;
+    -fx-border-color: #734153;
+    -fx-border-radius: 12;
+    -fx-padding: 16;
+}
+
+.coin-halo {
+    -fx-fill: #e9a45116;
+    -fx-stroke: #d9945045;
+    -fx-stroke-dash-array: 2 5;
+}
+
+.coin-rim {
+    -fx-fill: linear-gradient(to bottom right, #fff3b5, #bb6f2d 68%, #f1b561);
+    -fx-effect: dropshadow(gaussian, #fbb65040, 22, 0.15, 0, 3);
+}
+
+.coin-face {
+    -fx-fill: linear-gradient(to bottom right, #f5d18a, #e1a251 56%, #f4cb7d);
+    -fx-stroke: #925020;
+    -fx-stroke-width: 2;
+}
+
+.coin-ring {
+    -fx-fill: transparent;
+    -fx-stroke: #9f5d2e;
+    -fx-stroke-dash-array: 2 3;
+}
+
+.coin-mark {
+    -fx-fill: #874122;
+}
+
+.bag-button {
+    -fx-min-width: 152;
+    -fx-min-height: 152;
+    -fx-padding: 12 15;
+    -fx-graphic-text-gap: 8;
+    -fx-background-color: linear-gradient(to bottom, #703447, #492432);
+    -fx-background-radius: 12;
+    -fx-border-color: #ad7462;
+    -fx-border-radius: 12;
+    -fx-text-fill: #ffedcc;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.bag-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #874456, #5a2b39);
+    -fx-border-color: #ffd297;
+}
+
+.bag-button:focus-visible {
+    -fx-border-color: #ffd297;
+    -fx-border-style: dashed;
+}
+
+.bag-button:disabled {
+    -fx-opacity: 1;
+    -fx-cursor: default;
+}
+
+.bag-shadow {
+    -fx-fill: #260f1a75;
+}
+
+.bag-body {
+    -fx-fill: linear-gradient(to bottom right, #ffe3a1, #db9348 56%, #a55332);
+    -fx-stroke: #f6c182;
+    -fx-stroke-width: 1.25;
+}
+
+.bag-top {
+    -fx-fill: linear-gradient(to bottom, #efbb75, #b76b3a);
+}
+
+.bag-tie, .bag-emblem {
+    -fx-fill: #853849;
+}
+
+.bag-cord {
+    -fx-fill: transparent;
+    -fx-stroke: #853849;
+    -fx-stroke-width: 3;
+    -fx-stroke-line-cap: round;
+}
+
+.status-bar {
+    -fx-padding: 8 5 3 5;
+}
+
+.status-light {
+    -fx-fill: #e5aa63;
+}
+
+.status {
+    -fx-text-fill: #f6d7b9;
+}
+
+.pay-button, .start-button {
+    -fx-padding: 11 20;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.pay-button {
+    -fx-background-color: #492631;
+    -fx-border-color: #a9765e;
+    -fx-text-fill: #ffe9cc;
+}
+
+.pay-button:hover, .pay-button:focused {
+    -fx-background-color: #623442;
+    -fx-border-color: #f8c88e;
+}
+
+.sound-button {
+    -fx-min-width: 96px;
+    -fx-padding: 8 12;
+    -fx-font-size: 12px;
+}
+
+.start-button {
+    -fx-background-color: linear-gradient(to bottom, #ffdb98, #ecab61);
+    -fx-border-color: #ffe4b6;
+    -fx-text-fill: #331621;
+}
+
+.start-button:hover, .start-button:focused {
+    -fx-background-color: #ffe0a8;
+    -fx-border-color: #fff4df;
+}
+
+.game-dialog {
+    -fx-pref-width: 440px;
+    -fx-border-color: #925b42;
+    -fx-padding: 1;
+}
+
+.game-dialog:header .header-panel {
+    -fx-background-color: linear-gradient(to bottom, #49212c, #351824);
+    -fx-background-insets: 0;
+    -fx-border-color: transparent transparent #744456 transparent;
+    -fx-padding: 18 22;
+}
+
+.game-dialog:header .header-panel .label {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 25px;
+    -fx-text-fill: #fff2da;
+}
+
+.game-dialog > .content.label {
+    -fx-text-fill: #f6d7b9;
+    -fx-wrap-text: true;
+    -fx-padding: 16 22 6;
+}
+
+.game-dialog > .button-bar > .container {
+    -fx-padding: 14 22 18;
+}

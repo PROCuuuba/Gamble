@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.SVGPath?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.gamble.Controller"
+      styleClass="machine" stylesheets="@gamble.css" spacing="24">
+    <padding>
+        <Insets top="32" right="36" bottom="30" left="36"/>
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <VBox spacing="4">
+            <Label text="ИГРОВОЙ АВТОМАТ" styleClass="eyebrow"/>
+            <Label text="Три мешочка" styleClass="title"/>
+            <Label text="Сыграйте за монету и испытайте удачу." styleClass="muted"/>
+        </VBox>
+        <Region HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER_LEFT" spacing="2" styleClass="balance-panel">
+            <Label fx:id="playerName" styleClass="caption"/>
+            <HBox alignment="BASELINE_LEFT" spacing="8">
+                <Label fx:id="balance" styleClass="balance"/>
+                <Label text="на балансе" styleClass="muted"/>
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <VBox styleClass="cabinet" spacing="14" VBox.vgrow="ALWAYS">
+        <HBox alignment="CENTER_LEFT" spacing="12">
+            <Label text="ИГРОВОЕ ПОЛЕ" styleClass="eyebrow"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="СТАВКА  ·  1 МОНЕТА" styleClass="stake"/>
+        </HBox>
+
+        <StackPane styleClass="reel" minHeight="196" VBox.vgrow="ALWAYS">
+            <StackPane fx:id="coin">
+                <Circle radius="69" styleClass="coin-halo"/>
+                <Circle radius="54" styleClass="coin-rim"/>
+                <Circle radius="46" styleClass="coin-face"/>
+                <Circle radius="38" styleClass="coin-ring"/>
+                <SVGPath content="M 0 15 L 15 0 L 30 15 L 15 30 Z M 9 15 L 15 21 L 21 15 L 15 9 Z"
+                         fillRule="EVEN_ODD" styleClass="coin-mark"/>
+            </StackPane>
+
+            <HBox fx:id="bags" alignment="CENTER" spacing="18" visible="false" managed="false">
+                <Button fx:id="firstBag" text="Мешочек 1" styleClass="bag-button" contentDisplay="TOP">
+                    <graphic>
+                        <fx:include source="bag.fxml"/>
+                    </graphic>
+                </Button>
+                <Button fx:id="secondBag" text="Мешочек 2" styleClass="bag-button" contentDisplay="TOP">
+                    <graphic>
+                        <fx:include source="bag.fxml"/>
+                    </graphic>
+                </Button>
+                <Button fx:id="thirdBag" text="Мешочек 3" styleClass="bag-button" contentDisplay="TOP">
+                    <graphic>
+                        <fx:include source="bag.fxml"/>
+                    </graphic>
+                </Button>
+            </HBox>
+        </StackPane>
+
+        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="status-bar">
+            <Circle radius="4" styleClass="status-light"/>
+            <Label fx:id="status" styleClass="status"/>
+        </HBox>
+    </VBox>
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Button fx:id="payButton" text="Внести монету" onAction="#onPay" styleClass="pay-button"/>
+        <Button fx:id="startButton" text="Начать игру" onAction="#onStart" styleClass="start-button"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <ToggleButton fx:id="soundButton" text="Звук: вкл." selected="true" onAction="#onSoundToggle"
+                      styleClass="pay-button,sound-button"/>
+        <VBox alignment="CENTER_RIGHT" spacing="2">
+            <Label text="ОПЛАЧЕНО РАУНДОВ" styleClass="caption"/>
+            <Label fx:id="roundCount" styleClass="round-count"/>
+        </VBox>
+    </HBox>
+</VBox>
